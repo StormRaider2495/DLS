@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>DLS|Pluus+</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" type="image/icon" href="img/dls.ico"/>
+
+  <!-- Jquery Link -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script> -->
+
+  <!-- Google Glyphicons Link -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!-- Font Awesome Link -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <!-- Bootstrap CDN Link -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <!-- Google Font Cookie -->
+  <link href='http://fonts.googleapis.com/css?family=Cookie' rel='stylesheet' type='text/css'>
+
+  <!-- My Stylesheets -->
+  <link rel="stylesheet" type="text/css" href="css/dlsHomeStylz.css">
+  <link rel="stylesheet" type="text/css" href="css/dlsHomeAnimation.css">
+
+</head>
+
+<body>
+
+<!-- ----------------------------------------- TOP NAVIGATION BAR STARTS ---------------------------------------- -->
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+          <a class="navbar-brand site-name" href="#">Digital <span> Library Systems </span> </a>
+      </div>
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="javascript:void(0)"> <i class="material-icons">home</i> Home</a></li>
+        <li><a href="javascript:void(0)"> <i class="material-icons">library_books</i> Books </a></li>
+        <li><a href="javascript:void(0)"> <i class="material-icons">library_music</i> Music </a></li>
+        <li><a href="javascript:void(0)"> <i class="material-icons">video_library</i> Video </a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right main-nav">
+        <li><a class="cd-signin" href="javascript:void(0)"><span class="glyphicon glyphicon-user cd-signin"></span> LogIn</a></li>
+        <li><a class="cd-signup" href="javascript:void(0)"><span class="glyphicon glyphicon-log-in cd-signup"></span> SignUp</a></li>
+      </ul>
+    </div>
+  </nav>
+<!-- ----------------------------------------- TOP NAVIGATION BAR ENDS ---------------------------------------- -->
+
+<!-- --------------------------- LOGIN REGISTRAION AND FORGET PASSWORD STARTS --------------------------- -->
+
+<div class="cd-user-modal"> <!-- this is the entire modal form, including the background -->
+  <div class="cd-user-modal-container"> <!-- this is the container wrapper -->
+    <ul class="cd-switcher">
+      <li><a href="javascript:void(0)">Please let me in...</a></li>
+      <li><a href="javascript:void(0)">Wanna be a part of the familia...</a></li>
+    </ul>
+<!-- --------------------------------------------------  log in form ------------------------------------------------------ -->
+    <div id="cd-login">
+      <form class="cd-form">
+
+        <p class="fieldset">
+          <label class="image-replace cd-email" for="signin-email">E-mail</label>
+          <input class="full-width has-padding has-border" id="signinEmail" type="email" placeholder="E-mail">
+          <span class="cd-error-message">Error message here!</span>
+        </p>
+
+        <p class="fieldset">
+          <label class="image-replace cd-password" for="signin-password">Password</label>
+          <input class="full-width has-padding has-border" id="signinPassword" type="password"  placeholder="Password">
+          <a href="javascript:void(0)" class="show-password">Show</a>
+          <span class="cd-error-message">Error message here!</span>
+        </p>
+
+        <p class="fieldset">
+          <input type="checkbox" id="remember-me" checked>
+          <label for="remember-me">Remember me</label>
+        </p>
+
+        <p class="fieldset">
+          <input class="full-width" type="submit" value="Login">
+        </p>
+      </form>
+
+      <p class="cd-form-bottom-message"><a href="#0">Forgot your password?</a></p>
+      <!-- <a href="#0" class="cd-close-form">Close</a> -->
+    </div>
+    <!-- ----------------------------------------cd-login form ends --------------------------------------- -->
+
+    <!-- ------------------------------------------ sign up form ----------------------------------------  -->
+    <div id="cd-signup">
+      <form class="cd-form">
+        <p class="fieldset">
+          <label class="image-replace cd-username" for="signup-firstName">First Name</label>
+          <input class="full-width has-padding has-border" id="signupfirstName" type="text" placeholder="First name">
+          <span class="cd-error-message">Error message here!</span>
+        </p>
+
+        <p class="fieldset">
+          <label class="image-replace cd-username" for="signup-lastName">Last Name</label>
+          <input class="full-width has-padding has-border" id="signup-lastName" type="text" placeholder="Last name">
+          <span class="cd-error-message">Error message here!</span>
+        </p>
+
+        <p class="fieldset">
+          <label class="image-replace cd-email" for="signup-email">E-mail</label>
+          <input class="full-width has-padding has-border" id="signup-email" type="email" placeholder="E-mail">
+          <span class="cd-error-message">Error message here!</span>
+        </p>
+
+        <p class="fieldset">
+          <label class="image-replace cd-datepicker" for="signup-dob">Date of Birth</label>
+          <input class="full-width has-padding has-border" id="signup-dob" type="date" name="dob">
+          <span class="cd-error-message">Error message here!</span>
+        </p>
+
+        <p class="fieldset">
+          <label class="image-replace cd-password" for="signup-password">Password</label>
+          <input class="full-width has-padding has-border" id="signup-password" type="password"  placeholder="Password">
+          <a href="javascript:void(0)" class="show-password">Show</a>
+          <span class="cd-error-message">Error message here!</span>
+        </p>
+
+        <p class="fieldset">
+          <label class="image-replace cd-password" for="confirm-password">Password</label>
+          <input class="full-width has-padding has-border" id="confirm-password" type="password"  placeholder="Re-enter Password">
+          <a href="javascript:void(0)" class="show-password">Show</a>
+          <span class="cd-error-message">Error message here!</span>
+        </p>
+
+        <p class="fieldset">
+          <input type="checkbox" id="accept-terms">
+          <label for="accept-terms">I agree to the <a href="javascript:void(0)">Terms</a></label>
+        </p>
+
+        <p class="fieldset">
+          <input class="full-width has-padding" type="submit" value="Create account">
+        </p>
+      </form>
+
+      <!-- <a href="#0" class="cd-close-form">Close</a> -->
+    </div>
+    <!-- -------------------------------------------------- cd-signup ------------------------------------------------------  -->
+
+
+    <!-- --------------------------------------------- reset password form ---------------------------------------------- -->
+    <div id="cd-reset-password">
+      <p class="cd-form-message">Lost your password? Please enter your email address. You will receive a link to create a new password.</p>
+
+      <form class="cd-form">
+        <p class="fieldset">
+          <label class="image-replace cd-email" for="reset-email">E-mail</label>
+          <input class="full-width has-padding has-border" id="reset-email" type="email" placeholder="E-mail">
+          <span class="cd-error-message">Error message here!</span>
+        </p>
+
+        <p class="fieldset">
+          <input class="full-width has-padding" type="submit" value="Reset password">
+        </p>
+      </form>
+
+      <p class="cd-form-bottom-message"><a href="javascript:void(0)">Back to log-in</a></p>
+    </div>
+    <!-- ---------------------------------------------- cd-reset-password ------------------------------------------------ -->
+    <a href="javascript:void(0)" class="cd-close-form">Close</a>
+  </div> <!-- cd-user-modal-container -->
+</div> <!-- cd-user-modal -->
+
+
+
+<!-- --------------------------- LOGIN REGISTRAION AND FORGET PASSWORD ENDS --------------------------- -->
+
+
+<!-- ----------------------------------------- CAROUSEL STARTS ---------------------------------------- -->
+
+<div class="container-fluid section-astronomer" id="cover-pic">
+
+  <div class="container">
+       <div id="apple">
+          <form method="post" action="/search" id="search">
+               <input type="text" name="search" size="40" placeholder=" What are you looking for? " onkeydown="javascript:void(0)" autocomplete>
+          </form>
+        </div>
+        <div class="stars"></div>
+  </div>
+</div>
+
+<!-- ----------------------------------------- CAROUSEL ENDS ---------------------------------------- -->
+<div class="container-fluid row outer fluid-outer">
+   <div class='col-sm-4 partitioned-divs inner'>
+      <span class=""><a href="javascript:void(0)"><i class="material-icons">library_books</i> Books </a></span>
+   </div>
+
+   <div class='col-sm-4 partitioned-divs inner'>
+      <span class=""><a href="javascript:void(0)"> <i class="material-icons">library_music</i> Music </a></span>
+   </div>
+   <div class='col-sm-4 partitioned-divs inner'>
+      <span class=""><a href="javascript:void(0)"> <i class="material-icons">video_library</i> Video </a>
+   </div>
+</div>
+
+<!-- <div class="container-fluid row outer">
+  <div class="container col-sm-6 inner">
+    <div class="message">You can make your own Library here.</div>
+    <button>Make your own Library...</button>
+  </div>
+
+  <div class="container col-sm-6 inner">
+      <div class="message">You can search your content here.</div>
+    <form method="post" action="/search" id="search">
+         <input type="text" name="search" size="35" placeholder=" What are you looking for? " onkeydown="javascript:void(0)">
+    </form>
+  </div>
+</div> -->
+
+<!-- <div class="container-fluid row outer outer">
+  <div class="container col-sm-5 outer grid-outer">
+    <div class="container col-sm-6 inner grid-inner-left">
+    </div>
+    <div class="container col-sm-6 inner grid-inner-left">
+    </div>
+    <div class="container col-sm-6 inner grid-inner-left">
+    </div>
+    <div class="container col-sm-6 inner grid-inner-left">
+    </div>
+  </div>
+  <div class="container col-sm-7 outer grid-outer">
+    <div class="container col-sm-12 inner grid-inner-right">
+    </div>
+    <div class="container col-sm-12 inner grid-inner-right">
+    </div>
+    <div class="container col-sm-12 inner grid-inner-right">
+    </div>
+  </div>
+</div> -->
+
+
+<!-- ----------------------------------------- CONTEST STARTS ---------------------------------------- -->
+<div class="container-fluid">
+  <br>
+  <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="false">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+  <div class="carousel-inner" role="listbox">
+
+      <!--  Slide 1 -->
+     <div class="item active">
+	 <!-- <img src="https://drive.google.com/uc?export=view&id=0B4OCkOHXRU2-eFRlVFRpa1IxaGs" width="device-width" height="100px"> -->
+	 <div class=" container contest-cover" width="device-width">
+        <div class="carousel-caption">
+        	<blockquote>
+              <div class="row">
+                <div class="col-sm-3 text-center">
+                  <!-- <img class="img-circle" src="http://www.reactiongifs.com/r/overbite.gif" style="width: 100px;height:100px;">    -->
+                  <h3>Photo Contest</h3>
+                </div>
+                <div class="col-sm-9">
+                  <p>Be free and exprees yourself. Do what comes naturally...</p>
+                  <small>Cee Lo Green</small>
+                </div>
+              </div>
+            </blockquote>
+           </div>
+        </div>
+      </div>
+      <!-- /Slide 1 -->
+
+     <!-- Slide 2 -->
+      <div class="item">
+
+      <!-- Contest Input Field -->
+          <div class="container contest-form">
+            <div class="container-fluid">
+                <div class="row">
+                    <p id="console"></p>
+                </div>
+            </div>
+            <div class="container-fluid">
+              <div class="well">Photo contest: copy, rules, terms, conditions, etc..</div>
+            </div>
+            <form role="form">
+               <div class="form-group">
+                 <label for="ContestantInputName">Name</label>
+                 <input class="form-control" id="ContestantInputName" placeholder="Enter your name" type="email">
+               </div>
+               <div class="form-group">
+                 <label for="ContestantInputEmail">Email address</label>
+                 <input class="form-control" id="ContestantInputEmail" placeholder="Enter email address" type="email">
+               </div>
+               <div class="form-group">
+                 <label for="ContestantInputFile">Select photo(s) to upload:
+                    <span style="color: red">Accepted format are jpg & jpeg only</span>
+                 </label>
+                 <input accept=".jpeg,.jpg" id="ContestantInputFile" multiple="" type="file">
+                 <p class="help-block">Image spec helpful information.....</p>
+               </div>
+               <div class="form-group">
+                 <label>Comments:</label>
+                 <textarea class="form-control"></textarea>
+               </div>
+                <button type="submit" class="btn btn-info">Submit</button>
+            </form>
+          </div>
+      <!-- /Contest Input Field-->
+
+      </div>
+    <!-- /Slide 2 -->
+  </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</div>
+
+<!-- ----------------------------------------- CONTEST ENDS ---------------------------------------- -->
+
+<!-- ----------------------------------------- FOOTER STARTS ---------------------------------------- -->
+
+<footer class="footer-distributed">
+		<div class="footer-left">
+			<h3>Digital <span>Library Systems</span></h3>
+			<!-- <p class="footer-links">
+					<a href="#">Home</a>
+					·
+					<a href="#">Books</a>
+					·
+					<a href="#">Music</a>
+					·
+					<a href="#">Video</a>
+					·
+					<a href="#">Write up</a>
+			</p> -->
+			<p class="footer-company-name">DLS Corp. LTD &copy; 2017</p>
+			<div class="footer-icons">
+					<a href="javascript:void(0)"><i class="fa fa-facebook"></i></a>
+					<a href="javascript:void(0)"><i class="fa fa-twitter"></i></a>
+					<a href="javascript:void(0)"><i class="fa fa-linkedin"></i></a>
+					<a href="javascript:void(0)"><i class="fa fa-github"></i></a>
+			</div>
+		</div>
+		<div class="footer-right">
+				<p>Contact Us</p>
+				<form action="#" method="post">
+					<input type="text" name="email" placeholder="Email" />
+					<textarea name="message" placeholder="Message"></textarea>
+					<button>Send</button>
+				</form>
+		</div>
+	</footer>
+
+<!-- ----------------------------------------- FOOTER ENDS ---------------------------------------- -->
+
+<script src="js/modal.js"></script>
+</body>
+</html>
